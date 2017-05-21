@@ -1,7 +1,7 @@
 package rocketData;
 
 import java.io.Serializable;
-
+//added getter and setter cahnge 
 public class LoanRequest implements Serializable {
 
 	private int iTerm;
@@ -10,12 +10,22 @@ public class LoanRequest implements Serializable {
 	private int iCreditScore;
 	private int iDownPayment;
 	private double dPayment;
+	private double Income;
 	
-	//	TODO - RocketBLL.LoanRequest
-	//			missing attributes...
-	//			Income
-	//			Expenses
-	//			Add these attributes to the class... add getters and setters.
+	public double getIncome() {
+		return Income;
+	}
+	public void setIncome(double income) {
+		Income = income;
+	}
+	public double getExpenses() {
+		return Expenses;
+	}
+	public void setExpenses(double expenses) {
+		Expenses = expenses;
+	}
+	private double Expenses;
+	
 	
 	public LoanRequest() {
 		super();
@@ -53,6 +63,7 @@ public class LoanRequest implements Serializable {
 	public double getdPayment() {
 		return dPayment;
 	}
+	
 	public void setdPayment(double dPayment) {
 		this.dPayment = dPayment;
 	}
